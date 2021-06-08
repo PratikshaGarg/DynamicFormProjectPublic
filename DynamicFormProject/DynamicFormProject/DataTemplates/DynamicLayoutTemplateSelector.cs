@@ -52,23 +52,12 @@ namespace DynamicFormProject.DataTemplates
                 label1.SetBinding(Label.TextProperty, "Label");
                 picker = new Picker() { Margin = new Thickness(10, 0, 10, 0), HorizontalOptions = LayoutOptions.FillAndExpand };
                 picker.SetBinding(Picker.ItemsSourceProperty, "DropDownValues", BindingMode.TwoWay);
-                picker.SetBinding(Picker.SelectedItemProperty, new Binding("SelectedItem", source: new HomePageViewModel()));
-                //picker.SelectedIndexChanged += this.myPickerSelectedIndexChanged;
-                
+                picker.SetBinding(Picker.SelectedIndexProperty, "Index", BindingMode.TwoWay);               
                 s1.Children.Add(label1);
                 s1.Children.Add(picker);
                 return s1;
             });
         }
-
-        //public void myPickerSelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    //Method call every time when picker selection changed.
-        //    //var selectedValue = picker.Items[picker.SelectedIndex];
-        //    if(picker.SelectedIndex != -1)
-        //    picker.SelectedItem = new Binding(picker.Items[picker.SelectedIndex]);
-
-        //}
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {

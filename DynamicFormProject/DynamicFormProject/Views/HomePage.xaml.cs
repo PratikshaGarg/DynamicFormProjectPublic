@@ -25,8 +25,7 @@ namespace DynamicFormProject.Views
 
         protected override void OnAppearing()
         {
-            (BindingContext as HomePageViewModel).Item = ((BindingContext as HomePageViewModel).DataStore as MockDataStore).item;
-            var test = (BindingContext as HomePageViewModel).SelectedItem;
+            (BindingContext as HomePageViewModel).OnAppearing();
         }
     }
 }

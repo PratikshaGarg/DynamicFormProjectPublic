@@ -30,7 +30,7 @@
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
                 <Label Text="Demo of dynamic UI rendering" FontSize="Title"/>
-                <Label Text="This project displays the UI based on the json input provided to it!" FontSize="16" Padding="0,0,0,0"/>
+                <Label Text="This project displays the UI based on the json input provided to it! Once you fill and save the data it gets saved in application cache. Even if you navigate to different page data would be displayed." FontSize="16" Padding="0,0,0,0"/>
                 <Label FontSize="16" Padding="0,24,0,0">
                     <Label.FormattedText>
                         <FormattedString>
